@@ -2,13 +2,6 @@ var times = [3000, 1500, 2000, 2000, 2900, 2900, 5000, 2000, 2200, 1900, 4900, 4
   4900, 4000, 5000, 5000, 5000, 7500, 7500, 7500, 1500, 6500, 
   3000, 5000, 4000, 4000, 5000, 3000, 3000, 1800, 3400, 3400, 3400, 6000, 6000, 4000, 4000, 4000, 3200, 3200, 1500, 5500, 1500, 2500, 2300, 2300, 2700];
   
-  
-function randomChannel() {
-  var channel = 46;
-  document.body.style.backgroundImage = "url(images/" + channel + ".gif)";
-  setTimeout(changeChannel, times[channel]);
-}
-  
 var channels = [];
 
 function shuffle(array) {
@@ -35,7 +28,6 @@ function changeChannel() {
   setTimeout(randomChannel, 500);
 }
 
-/*
 function randomChannel() {
   if(channels.length == 0) {
     for(var i = 0; i < times.length; i++) {
@@ -47,6 +39,6 @@ function randomChannel() {
   var channel = channels.pop();
   document.body.style.backgroundImage = "url(images/" + channel + ".gif)";
   setTimeout(changeChannel, times[channel]);
-}*/
+}
 
 randomChannel();
